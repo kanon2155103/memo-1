@@ -23,6 +23,9 @@
     "pug": "2.0.4",
     "sequelize": "6.5.0"
   },
+  "engines": {
+    "node": ">=14"
+  },
   "devDependencies": {
     "@babel/core": "7.1.6",
     "@babel/preset-env": "7.1.6",
