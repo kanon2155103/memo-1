@@ -5,6 +5,11 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title New Document
-		link(rel="stylesheet", href="./style/new.css")
+		link(rel="stylesheet", href="../style/new.css")
 	body
-		textarea(name="content")
+		h1 New Document
+		form(method="post" action="/new")
+			div
+				textarea(name="content")
+			div
+				button(type="submit") 保存
