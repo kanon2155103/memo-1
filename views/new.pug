@@ -5,13 +5,13 @@ html(lang="en")
 		meta(http-equiv="X-UA-Compatible", content="IE=edge")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title New Document
-		link(rel="stylesheet", href="../style/new.css")
+		link(rel="stylesheet", href="./new.css")
 	body
 		h1 New Document
 		form(method="post" action="/new")
 			div
 				textarea(name="title")
 			div
-				textarea(name="content")
+				textarea#documentArea(name="content")
 			div
 				button(type="submit") 保存

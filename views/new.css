@@ -1,9 +1,9 @@
-textarea {
+#documentArea {
 	outline: none;
 	font-family: inherit;
 	font-size: 1.2rem;
 	border: none;
-	height: 400vh;
+	height: 100vh;
 	width: 100vh;
 	padding: 20px;
 }
