@@ -6,11 +6,20 @@ html(lang="ja")
 		meta(name="viewport", content="width=device-width, initial-scale=1.0")
 		title Memo
 	body
-		h1 Memo
+		h1 Home
 		div
-			button(type="submit") New
+			a(href="/new")
+				button(type="submit") New
+		div
+			a(href="/trash")
+				button(type="submit") Trash
 		div
 			each memo in memos
-				p #{memo.content}
-				p #{memo.updatedAt}
+				a(href=`/memo/${memo.id}`)
+					p #{memo.title}
+					p #{memo.updatedAt}
+				form(method="post" action="/trash")
+					input(type="hidden" name="memoId" value=memo.id)
+					input(type="checkbox" name="isDeleted" style="visibility: hidden" checked)
+					button(type="submit") 削除
 				hr

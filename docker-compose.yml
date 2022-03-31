@@ -16,3 +16,5 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: memo
       TZ: "Asia/Tokyo"
+    volumes:
+      - ../memo-db:/var/lib/postgresql/data

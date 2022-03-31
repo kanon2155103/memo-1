@@ -7,3 +7,17 @@ html(lang="en")
 		title Trash
 	body
 		h1 trash
+		a(href="/memo")
+			button(type="submit") Home
+		div
+			each memo in memos
+				a(href=`/memo/${memo.id}`)
+					p #{memo.title}
+					p #{memo.updatedAt}
+				form(method="post" action="/memo?delete=1")
+					input(type="hidden" name="memoId" value=memo.id)
+					button(type="submit") 削除
+				form(method="post" action="/memo")
+					input(type="hidden" name="memoId" value=memo.id)
+					button(type="submit") 復元
+				hr
